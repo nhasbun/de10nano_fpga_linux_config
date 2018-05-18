@@ -247,5 +247,6 @@ void config_routine()
   while(1) if(fpga_state() == 0x4) break;
 
   set_axicfgen(0); // Turn off AXI configuration data transfers..
+  set_ctrl_en(0);  // Disable control by HPS (so JTAG can load new fpga configs).
   report_status(); // Should report "User mode".
 }
