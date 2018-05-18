@@ -1,5 +1,7 @@
 # DE10-Nano FPGA Configuration from Linux
 
+> Nicolás Hasbún A. 18 - 05 - 2018
+
 Software to configure the FPGA portion of the Cyclone V SoC. It works under Linux focused on the de10nano platform but should be easily portable to other platforms using the same family chip.
 
 Main sources to accomplish this work:
