@@ -11,10 +11,10 @@ Main sources to accomplish this work:
 
 This is fully implemented in C using direct register access to take control of the FPGA Manager device which is used by the HPS to configure the FPGA. No external libraries are used other than Linux system calls and SoCAL libraries included on Quartus installations. Partial reconfiguration is still not studied but could be implemented in the future since it gives an important boost to create many applications.
 
- Programming FPGA from HPS could be accomplished at three different stages of board start:
+ Programming FPGA from HPS could be accomplished at three different stages:
 
-* From Preloader
-* From U-boot
+* From Preloader (at start)
+* From U-boot (at start)
 * From Linux
 
 Preloader and U-boot methods are well covered on Altera documentation being U-boot the most straightforward of them since you only need to copy your rbf file to sd card. Linux method changes between distributions and documentation for it doesn't always work or it is outdated (as seen on [Rocketboards](https://rocketboards.org/foswiki/Documentation/GSRD131ProgrammingFPGA)). By using direct register access to FPGA Manager we can accomplish a Linux method agnostic to the current distribution or internal system configuration.
